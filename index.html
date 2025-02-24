@@ -36,23 +36,24 @@
             width: 100%;
             display: block;
             margin: auto;
-            overflow-x: auto;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         table {
             margin: auto;
             border-collapse: collapse;
-            width: 100%; /* Full width on desktop */
+            width: 100%; /* Full width on all devices */
             max-width: 1000px; /* Larger table on desktop */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 15px #28A745;
             background: #222;
             color: white;
+            table-layout: fixed; /* Fixed table layout for responsiveness */
         }
         th, td {
             border: 1px solid #28A745;
-            padding: 25px; /* Larger padding on desktop */
-            font-size: 1.6rem; /* Larger font size on desktop */
+            padding: 15px; /* Reduced padding for mobile */
+            font-size: 1.4rem; /* Default font size */
         }
         th {
             background-color: #333;
@@ -73,11 +74,11 @@
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             table {
-                width: 90%; /* Smaller width on mobile */
-                font-size: 1.2rem; /* Smaller font size on mobile */
+                width: 100%; /* Table width at 100% for small screens */
+                font-size: 1.2rem; /* Smaller font size for mobile */
             }
             th, td {
-                padding: 15px; /* Smaller padding on mobile */
+                padding: 10px; /* Further reduce padding on mobile */
             }
         }
         /* Logo Animation */
