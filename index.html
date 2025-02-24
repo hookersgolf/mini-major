@@ -50,6 +50,15 @@
             background-color: #333; /* Darker background for better contrast */
             color: white; /* White text in header */
         }
+        th a {
+            color: #FFD700; /* Ensure links are bright gold */
+            text-decoration: none; /* No underline by default */
+            font-weight: bold; /* Make the text stand out */
+        }
+        th a:hover {
+            text-decoration: underline; /* Underline when hovering */
+            color: #28A745; /* Green on hover */
+        }
         tr:hover {
             background-color: rgba(255, 215, 0, 0.2);
             transition: 0.3s;
@@ -58,15 +67,6 @@
             width: 200px;
             margin-bottom: 20px;
             animation: fadeIn 2s ease-in-out;
-        }
-        .map-link {
-            color: #FFD700; /* Bright gold text */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .map-link:hover {
-            text-decoration: underline;
-            color: #28A745; /* Green on hover */
         }
         .player-avatar {
             width: 50px;
@@ -93,8 +93,8 @@
         <tr>
             <th>Player</th>
             <th>Handicap</th>
-            <th><a href="https://www.heritageresort.ie/golf/" class="map-link">The Heritage</a></th>
-            <th><a href="https://www.kilkennygolfclub.com/" class="map-link">Kilkenny</a></th>
+            <th><a href="https://www.heritageresort.ie/golf/">The Heritage</a></th>
+            <th><a href="https://www.kilkennygolfclub.com/">Kilkenny</a></th>
         </tr>
         <tr>
             <td><img src="ciaran.png" alt="Ciaran" class="player-avatar"></td>
