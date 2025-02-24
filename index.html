@@ -73,7 +73,8 @@
 
         /* Player Stats - Leaderboard */
         .leaderboard-container {
-            margin-top: 30px;
+            margin-top: 50px;
+            text-align: center;
         }
         .leaderboard-container h3 {
             font-size: 2rem;
@@ -91,6 +92,7 @@
                 padding: 10px;
             }
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -98,7 +100,7 @@
     </style>
 </head>
 <body>
-    <img src="logo.jpg" alt="Mini Major Logo">
+    <img src="logo.jpg" alt="Mini Major Logo" style="width: 200px; margin-bottom: 20px; animation: fadeIn 2s ease-in-out;">
     <h1 class="glow-text">Hookers and Slicers - Mini Major</h1>
     <h2 id="countdown"></h2>
 
@@ -135,7 +137,7 @@
     <!-- Leaderboard Section -->
     <div class="leaderboard-container">
         <h3>Leaderboard</h3>
-        <table id="leaderboard">
+        <table id="leaderboard" style="margin: 0 auto;">
             <tr>
                 <th>Position</th>
                 <th>Player</th>
