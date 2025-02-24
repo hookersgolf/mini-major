@@ -38,20 +38,19 @@
             margin: auto;
         }
         table {
-            width: 100%; /* 100% width for all devices */
-            max-width: 1000px; /* Max width for large screens */
+            width: 100%; /* Make table take full width */
+            max-width: 1000px; /* Limit max width for larger screens */
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 15px #28A745;
             background: #222;
             color: white;
-            table-layout: auto; /* Auto table layout */
         }
         th, td {
             border: 1px solid #28A745;
-            padding: 12px 15px; /* Reduced padding */
-            font-size: 1.2rem; /* Default font size */
+            padding: 15px; /* Moderate padding */
+            font-size: 1.4rem; /* Default font size */
         }
         th {
             background-color: #333;
@@ -72,14 +71,14 @@
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             table {
-                font-size: 0.9rem; /* Smaller font for mobile */
-                width: 100%; /* Full width for smaller devices */
+                font-size: 1rem; /* Smaller font for mobile */
+                width: 100%;
             }
             th, td {
-                padding: 8px;  /* Reduced padding */
+                padding: 10px;  /* Reduced padding */
             }
             .player-avatar {
-                width: 45px; /* Smaller avatar size for mobile */
+                width: 50px; /* Smaller avatar size for mobile */
             }
         }
         /* Logo Animation */
