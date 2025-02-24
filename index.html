@@ -17,7 +17,7 @@
         h1 {
             text-align: center;
             color: #4CAF50;
-            font-size: 28px; /* Adjusted for better readability */
+            font-size: 28px;
         }
 
         .container {
@@ -35,7 +35,7 @@
 
         /* Table styles */
         table {
-            width: 100%; /* Make the table take full width on small screens */
+            width: 100%; /* Table takes full width on small screens */
             margin: 20px 0;
             border-collapse: collapse;
             background-color: #fff;
@@ -43,7 +43,7 @@
         }
 
         th, td {
-            padding: 12px; /* Increased padding for both mobile and desktop */
+            padding: 8px; /* Padding for smaller screens */
             text-align: left;
             border: 1px solid #ddd;
         }
@@ -51,11 +51,11 @@
         th {
             background-color: #4CAF50;
             color: white;
-            font-size: 20px; /* Larger font size for headers */
+            font-size: 18px; /* Font size for headers */
         }
 
         td {
-            font-size: 18px; /* Larger font size for data */
+            font-size: 16px; /* Font size for table data */
         }
 
         tr:nth-child(even) {
@@ -65,16 +65,16 @@
         /* Styles for larger screens (Desktops) */
         @media only screen and (min-width: 1024px) {
             table {
-                width: 95%; /* Make the table fill more of the screen */
-                font-size: 20px; /* Increase font size for desktop */
+                width: 80%; /* Make the table smaller on desktop */
+                font-size: 18px; /* Increase font size for table content */
             }
 
             th, td {
-                padding: 18px; /* Further increase padding for larger screens */
+                padding: 12px; /* Increase padding for desktop */
             }
 
             h1 {
-                font-size: 42px; /* Increase header size for desktop */
+                font-size: 36px; /* Increase header font size for desktop */
             }
         }
 
@@ -85,7 +85,7 @@
         }
 
         .logo img {
-            width: 250px; /* Larger logo on desktop */
+            width: 150px; /* Logo size stays the same */
         }
 
     </style>
