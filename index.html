@@ -38,8 +38,6 @@
             display: flex;
             justify-content: center; /* Center the table container */
             margin-top: 20px;
-            padding-left: 10px;  /* Ensure padding on both sides */
-            padding-right: 10px; /* Ensure padding on both sides */
         }
         table {
             width: 600px; /* Set table width to 600px */
@@ -49,7 +47,8 @@
             box-shadow: 0px 0px 15px #28A745;
             background: #222;
             color: white;
-            margin: auto; /* Ensure table is centered */
+            margin-left: auto; /* Ensure table is centered */
+            margin-right: auto; /* Ensure table is centered */
         }
         th, td {
             border: 1px solid #28A745;
@@ -74,15 +73,9 @@
         }
         /* Mobile Adjustments */
         @media (max-width: 600px) {
-            .table-container {
-                padding-left: 0px;
-                padding-right: 0px; /* Remove padding on mobile */
-            }
             table {
                 font-size: 1rem; /* Smaller font for mobile */
                 width: 100%;
-                margin-left: 0; /* Ensure no extra margin on left side */
-                margin-right: 0; /* Ensure no extra margin on right side */
             }
             th, td {
                 padding: 10px;  /* Reduced padding */
