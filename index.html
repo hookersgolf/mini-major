@@ -36,24 +36,22 @@
         .table-container {
             width: 100%;
             display: flex;
-            justify-content: center; /* Center the table container */
-            margin-top: 20px;
+            justify-content: center; /* Ensures the container centers the table */
+            padding: 10px 0; /* Add padding to adjust the table */
         }
         table {
-            width: 600px; /* Set table width to 600px */
+            width: 600px; /* Table width is fixed at 600px */
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 15px #28A745;
             background: #222;
             color: white;
-            margin-left: auto; /* Ensure table is centered */
-            margin-right: auto; /* Ensure table is centered */
         }
         th, td {
             border: 1px solid #28A745;
-            padding: 12px; /* Uniform padding */
-            font-size: 1.3rem; /* Slightly smaller font size */
+            padding: 15px; /* Padding inside each cell */
+            font-size: 1.3rem; /* Font size for desktop */
         }
         th {
             background-color: #333;
@@ -74,11 +72,11 @@
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             table {
-                font-size: 1rem; /* Smaller font for mobile */
-                width: 100%;
+                width: 100%; /* Full width on mobile */
+                font-size: 1rem; /* Smaller font size on mobile */
             }
             th, td {
-                padding: 10px;  /* Reduced padding */
+                padding: 10px;  /* Reduced padding for smaller screens */
             }
             .player-avatar {
                 width: 50px; /* Smaller avatar size for mobile */
