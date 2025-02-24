@@ -36,24 +36,24 @@
             width: 100%;
             display: block;
             margin: auto;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: auto; /* Allow scrolling if necessary */
         }
         table {
             margin: auto;
             border-collapse: collapse;
-            width: 100%; /* Full width on all devices */
-            max-width: 1000px; /* Larger table on desktop */
+            width: 100%; /* Table width on all devices */
+            max-width: 1000px; /* Max width on desktop */
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 15px #28A745;
             background: #222;
             color: white;
-            table-layout: fixed; /* Fixed table layout for responsiveness */
+            table-layout: fixed; /* Ensures the table adjusts to fit smaller screens */
         }
         th, td {
             border: 1px solid #28A745;
-            padding: 15px; /* Reduced padding for mobile */
-            font-size: 1.4rem; /* Default font size */
+            padding: 15px;
+            font-size: 1.4rem;
         }
         th {
             background-color: #333;
@@ -74,11 +74,15 @@
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             table {
-                width: 100%; /* Table width at 100% for small screens */
-                font-size: 1.2rem; /* Smaller font size for mobile */
+                width: 100%;
+                font-size: 1rem; /* Reduce font size further for mobile */
+                padding: 10px;  /* Reduce padding for mobile devices */
             }
             th, td {
-                padding: 10px; /* Further reduce padding on mobile */
+                padding: 8px;  /* Reduce padding for smaller screens */
+            }
+            .player-avatar {
+                width: 40px; /* Smaller avatars on mobile */
             }
         }
         /* Logo Animation */
@@ -93,7 +97,7 @@
             animation: fadeIn 2s ease-in-out, logoGlow 3s infinite alternate ease-in-out;
         }
         .player-avatar {
-            width: 60px; /* Slightly bigger */
+            width: 60px; /* Default avatar size */
             border-radius: 50%;
             box-shadow: 0px 0px 10px #28A745;
         }
