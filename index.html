@@ -168,6 +168,7 @@
     </div>
 
     <script>
+        // Countdown Timer
         function updateCountdown() {
             const eventDate = new Date('April 4, 2025 00:00:00').getTime();
             const now = new Date().getTime();
@@ -182,6 +183,43 @@
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        // Player Stats - Leaderboard Update Logic
+        let players = [
+            { name: "Ciaran", round1: 72, round2: 75 },
+            { name: "David", round1: 80, round2: 85 },
+            { name: "Marcus", round1: 78, round2: 82 }
+        ];
+
+        // Calculate total scores and update leaderboard dynamically
+        function updateLeaderboard() {
+            const leaderboard = document.getElementById("leaderboard");
+            leaderboard.innerHTML = `
+                <tr>
+                    <th>Position</th>
+                    <th>Player</th>
+                    <th>Round 1</th>
+                    <th>Round 2</th>
+                    <th>Total</th>
+                </tr>
+            `;
+
+            players.sort((a, b) => (a.round1 + a.round2) - (b.round1 + b.round2));
+
+            players.forEach((player, index) => {
+                const row = leaderboard.insertRow();
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${player.name}</td>
+                    <td>${player.round1}</td>
+                    <td>${player.round2}</td>
+                    <td>${player.round1 + player.round2}</td>
+                `;
+            });
+        }
+
+        // Call function to populate leaderboard
+        updateLeaderboard();
     </script>
 </body>
 </html>
