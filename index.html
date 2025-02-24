@@ -17,7 +17,6 @@
         h1 {
             text-align: center;
             color: #4CAF50;
-            font-size: 28px;
         }
 
         .container {
@@ -35,7 +34,7 @@
 
         /* Table styles */
         table {
-            width: 100%; /* Table takes full width on small screens */
+            width: 100%; /* Make the table take full width on small screens */
             margin: 20px 0;
             border-collapse: collapse;
             background-color: #fff;
@@ -43,7 +42,7 @@
         }
 
         th, td {
-            padding: 8px; /* Padding for smaller screens */
+            padding: 8px; /* Adjust padding for mobile */
             text-align: left;
             border: 1px solid #ddd;
         }
@@ -51,11 +50,6 @@
         th {
             background-color: #4CAF50;
             color: white;
-            font-size: 18px; /* Font size for headers */
-        }
-
-        td {
-            font-size: 16px; /* Font size for table data */
         }
 
         tr:nth-child(even) {
@@ -63,18 +57,14 @@
         }
 
         /* Styles for larger screens (Desktops) */
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             table {
-                width: 80%; /* Make the table smaller on desktop */
-                font-size: 18px; /* Increase font size for table content */
+                width: 80%; /* Make the table smaller on desktops */
+                font-size: 16px; /* Increase font size for desktops */
             }
 
             th, td {
-                padding: 12px; /* Increase padding for desktop */
-            }
-
-            h1 {
-                font-size: 36px; /* Increase header font size for desktop */
+                padding: 12px; /* Adjust padding for larger screens */
             }
         }
 
@@ -85,7 +75,7 @@
         }
 
         .logo img {
-            width: 150px; /* Logo size stays the same */
+            width: 150px;
         }
 
     </style>
