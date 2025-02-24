@@ -31,18 +31,10 @@
             border: 2px solid #28A745;
             box-shadow: 0px 0px 15px #28A745;
         }
-        /* Mobile-Friendly Table */
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-            display: flex;
-            justify-content: center;
-        }
         table {
             margin: auto;
             border-collapse: collapse;
-            width: 90%; /* Adjusted for better mobile fit */
-            max-width: 600px; /* Prevents it from stretching too much */
+            width: 70%;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 15px #28A745;
@@ -70,22 +62,6 @@
             background-color: rgba(255, 215, 0, 0.2);
             transition: 0.3s;
         }
-        /* Responsive Table Styling */
-        @media (max-width: 600px) {
-            table {
-                width: 100%; /* Makes table take up full width */
-                font-size: 1rem; /* Smaller font for better fit */
-            }
-            th, td {
-                padding: 10px; /* Reduces padding for better spacing */
-            }
-        }
-        /* Logo Animation */
-        @keyframes logoGlow {
-            0% { filter: drop-shadow(0 0 5px #28A745); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 15px #28A745); transform: scale(1.05); }
-            100% { filter: drop-shadow(0 0 5px #28A745); transform: scale(1); }
-        }
         img {
             width: 200px;
             margin-bottom: 20px;
@@ -104,43 +80,46 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        @keyframes logoGlow {
+            0% { filter: drop-shadow(0 0 5px #28A745); transform: scale(1); }
+            50% { filter: drop-shadow(0 0 15px #28A745); transform: scale(1.05); }
+            100% { filter: drop-shadow(0 0 5px #28A745); transform: scale(1); }
+        }
     </style>
 </head>
 <body>
     <img src="logo.jpg" alt="Mini Major Logo">
     <h1 class="glow-text">Hookers and Slicers - Mini Major</h1>
     <h2 id="countdown"></h2>
-
+    
     <h3 class="glow-text">Handicaps and Shots Given</h3>
-    <div class="table-container">
-        <table>
-            <tr>
-                <th>Player</th>
-                <th>Handicap</th>
-                <th><a href="https://www.heritageresort.ie/golf/">The Heritage</a></th>
-                <th><a href="https://www.kilkennygolfclub.com/">Kilkenny</a></th>
-            </tr>
-            <tr>
-                <td><img src="ciaran.png" alt="Ciaran" class="player-avatar"></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td><img src="david.png" alt="David" class="player-avatar"></td>
-                <td>30</td>
-                <td>21</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td><img src="marcus.png" alt="Marcus" class="player-avatar"></td>
-                <td>18</td>
-                <td>9</td>
-                <td>9</td>
-            </tr>
-        </table>
-    </div>
-
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Handicap</th>
+            <th><a href="https://www.heritageresort.ie/golf/">The Heritage</a></th>
+            <th><a href="https://www.kilkennygolfclub.com/">Kilkenny</a></th>
+        </tr>
+        <tr>
+            <td><img src="ciaran.png" alt="Ciaran" class="player-avatar"></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><img src="david.png" alt="David" class="player-avatar"></td>
+            <td>30</td>
+            <td>21</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td><img src="marcus.png" alt="Marcus" class="player-avatar"></td>
+            <td>18</td>
+            <td>9</td>
+            <td>9</td>
+        </tr>
+    </table>
+    
     <script>
         function updateCountdown() {
             const eventDate = new Date('April 4, 2025 00:00:00').getTime();
