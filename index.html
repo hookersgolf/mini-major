@@ -17,6 +17,7 @@
         h1 {
             text-align: center;
             color: #4CAF50;
+            font-size: 28px; /* Adjusted for better readability */
         }
 
         .container {
@@ -50,6 +51,11 @@
         th {
             background-color: #4CAF50;
             color: white;
+            font-size: 18px; /* Adjust font size for headers */
+        }
+
+        td {
+            font-size: 16px; /* Adjust font size for data */
         }
 
         tr:nth-child(even) {
@@ -57,14 +63,18 @@
         }
 
         /* Styles for larger screens (Desktops) */
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 1024px) {
             table {
-                width: 80%; /* Make the table smaller on desktops */
-                font-size: 16px; /* Increase font size for desktops */
+                width: 90%; /* Make the table slightly smaller but more readable on large screens */
+                font-size: 18px; /* Increase font size for desktop */
             }
 
             th, td {
-                padding: 12px; /* Adjust padding for larger screens */
+                padding: 15px; /* Increase padding for desktop */
+            }
+
+            h1 {
+                font-size: 36px; /* Increase header size for desktop */
             }
         }
 
@@ -75,7 +85,7 @@
         }
 
         .logo img {
-            width: 150px;
+            width: 200px; /* Larger logo on desktop */
         }
 
     </style>
