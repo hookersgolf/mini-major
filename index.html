@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hookers and Slicers - Mini Major</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        #countdown {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+        }
+        th {
+            background-color: #444;
+        }
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="Mini Major Logo">
+    <h1>Hookers and Slicers - Mini Major</h1>
+    <h2 id="countdown"></h2>
+    
+    <h3>Handicaps and Shots Given</h3>
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Handicap</th>
+            <th>Shots Given Per Course</th>
+        </tr>
+        <tr>
+            <td>Ciaran</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>30</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Marcus</td>
+            <td>18</td>
+            <td>9</td>
+        </tr>
+    </table>
+    
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date('April 4, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = eventDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
