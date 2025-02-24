@@ -38,6 +38,8 @@
             display: flex;
             justify-content: center; /* Center the table container */
             margin-top: 20px;
+            padding-left: 10px;  /* Ensure padding on both sides */
+            padding-right: 10px; /* Ensure padding on both sides */
         }
         table {
             width: 100%; /* Make table take full width */
@@ -49,8 +51,6 @@
             background: #222;
             color: white;
             margin: auto; /* Ensure table is centered */
-            padding-left: 10px; /* Equal padding on both sides */
-            padding-right: 10px; /* Equal padding on both sides */
         }
         th, td {
             border: 1px solid #28A745;
@@ -75,9 +75,15 @@
         }
         /* Mobile Adjustments */
         @media (max-width: 600px) {
+            .table-container {
+                padding-left: 0px;
+                padding-right: 0px; /* Remove padding on mobile */
+            }
             table {
                 font-size: 1rem; /* Smaller font for mobile */
                 width: 100%;
+                margin-left: 0; /* Ensure no extra margin on left side */
+                margin-right: 0; /* Ensure no extra margin on right side */
             }
             th, td {
                 padding: 10px;  /* Reduced padding */
