@@ -14,8 +14,42 @@
             padding: 20px;
             margin: 0;
         }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #222;
+            padding: 10px 0;
+            box-shadow: 0px 4px 10px #28A745;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: #28A745;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+
         h1 {
             font-size: 3rem;
+            margin-top: 70px; /* Adjust for fixed navbar */
             margin-bottom: 10px;
             text-transform: uppercase;
             text-shadow: 2px 2px 10px #28A745;
@@ -39,15 +73,16 @@
             border: 2px solid #28A745;
             box-shadow: 0px 0px 15px #28A745;
         }
+
         /* Table Container */
         .table-container {
             width: 100%;
             display: flex;
-            justify-content: center; /* Ensures the container centers the table */
-            padding: 10px 0; /* Add padding to adjust the table */
+            justify-content: center;
+            padding: 10px 0;
         }
         table {
-            width: 600px; /* Table width is fixed at 600px */
+            width: 600px;
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
@@ -57,8 +92,8 @@
         }
         th, td {
             border: 1px solid #28A745;
-            padding: 15px; /* Padding inside each cell */
-            font-size: 1.3rem; /* Font size for desktop */
+            padding: 15px;
+            font-size: 1.3rem;
         }
         th {
             background-color: #333;
@@ -76,19 +111,21 @@
             background-color: rgba(255, 215, 0, 0.2);
             transition: 0.3s;
         }
+
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             table {
-                width: 100%; /* Full width on mobile */
-                font-size: 1rem; /* Smaller font size on mobile */
+                width: 100%;
+                font-size: 1rem;
             }
             th, td {
-                padding: 10px;  /* Reduced padding for smaller screens */
+                padding: 10px;
             }
             .player-avatar {
-                width: 50px; /* Smaller avatar size for mobile */
+                width: 50px;
             }
         }
+
         /* Logo Animation */
         @keyframes logoGlow {
             0% { filter: drop-shadow(0 0 5px #28A745); transform: scale(1); }
@@ -101,7 +138,7 @@
             animation: fadeIn 2s ease-in-out, logoGlow 3s infinite alternate ease-in-out;
         }
         .player-avatar {
-            width: 60px; /* Default avatar size */
+            width: 60px;
             border-radius: 50%;
             box-shadow: 0px 0px 10px #28A745;
         }
@@ -116,6 +153,16 @@
     </style>
 </head>
 <body>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Handicaps</a></li>
+            <li><a href="#">Hall of Fame</a></li>
+        </ul>
+    </nav>
+
     <img src="logo.jpg" alt="Mini Major Logo">
     <h1 class="glow-text">Hookers and Slicers - Mini Major</h1>
     <h2 id="countdown"></h2>
@@ -126,8 +173,8 @@
             <tr>
                 <th>Player</th>
                 <th>Handicap</th>
-                <th>The Heritage</a></th>
-                <th>Kilkenny</a></th>
+                <th>The Heritage</th>
+                <th>Kilkenny</th>
             </tr>
             <tr>
                 <td><img src="ciaran.png" alt="Ciaran" class="player-avatar"></td>
@@ -157,7 +204,7 @@
                 <th>Player</th>
                 <th>The Heritage Scores</th>
                 <th>Kilkenny Scores</th>
-                <th>Total Scores</a></th>
+                <th>Total Scores</th>
             </tr>
             <tr>
                 <td><img src="david.png" alt="David" class="player-avatar"></td>
@@ -174,31 +221,12 @@
             <tr>
                 <td><img src="ciaran.png" alt="Ciaran" class="player-avatar"></td>
                 <td>-5</td>
-                <td>-3</td></td>
+                <td>-3</td>
                 <td>-8</td>
             </tr>
         </table>
     </div>
 
-    <h2 class="glow-text">Mini Major Hall of Fame</h2>
-<div class="table-container">
-    <table>
-        <tr>
-            <th>Year</th>
-            <th>Winner</th>
-            <th>Total Score</th>
-            <th>Best Moment</th>
-        </tr>
-        <tr>
-            <td>2025</td>
-            <td>🏆 TBH</td>
-            <td>TBH</td>
-            <td>TBH</td>
-        </tr>
-    </table>
-</div>
-
-    
     <script>
         function updateCountdown() {
             const eventDate = new Date('April 4, 2025 00:00:00').getTime();
@@ -215,5 +243,6 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
+
 </body>
 </html>
